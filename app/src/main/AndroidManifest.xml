@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="clare.raki.alejandra.app"
+ >
+
+//network access
+<uses-permission android:name="android.permission.INTERNET" />
+
+<application
+    android:allowBackup="true"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme" >
+    <activity
+        android:name="clare.raki.alejandra.sunnyday.MyActivity"
+        android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name="clare.raki.alejandra.sunnyday.DetailActivity"
+        android:label="@string/title_activity_detail"
+        android:parentActivityName="clare.raki.alejandra.sunnyday.MyActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="raki.example.alejandra.udacityapp.MyActivity" />
+    </activity>
+
+    <activity android:name="clare.raki.alejandra.sunnyday.SettingsActivity"
+        android:label="@string/title_activity_settings"
+        android:parentActivityName="clare.raki.alejandra.sunnyday.MyActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="MyActivity"/>
+    </activity>
+
+
+</application>
+
+</manifest>
+
